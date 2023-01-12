@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+<!-- this table class is from bootstrap -->
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{stock["symbol"]}}</td>
+            <td>{{stock["name"]}}</td>
+            <td>{{stock["SUM(shares)"]}}</td>
+            <td>{{usd(stock["price"])}}</td>
+            <td>{{usd(stock["SUM(shares)"] * stock["price"])}}</td>
+        </tr>
+        {% endfor %}
+
+        <tr>
+            <td>Balance:</td>
+            <td colspan="3"></td>
+            <td>{{usd(money)}}</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <td colspan="4"></td>
+        <td><b>{{usd(total)}}</b></td>
+    </tfoot>
+</table>
+{% endblock %}
