@@ -1,5 +1,10 @@
 # finance-cs50
-### Getting an API Key
+### What is it?
+A website that uses IEX's realtime market API to make a sort of-stock simulator where the user can register, login, log out, change their password and most importantly, view, buy and sell stocks.
+
+This site primarily uses Flask, IEX's API and CS50's SQL library
+
+### Getting an API Key and starting the dev server
 - Visit iexcloud.io/cloud-login#/register/.
 - Select the “Individual” account type, then enter your name, email address, and a password, and click “Create account”.
 - Once registered, scroll down to “Get started for free” and click “Select Start plan” to choose the free plan.
