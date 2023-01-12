@@ -1,2 +1,2 @@
-set API_KEY=your_api_key_here
+set API_KEY=
 flask run
