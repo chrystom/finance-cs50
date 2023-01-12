@@ -1,2 +1,2 @@
-export API_KEY=your_key_here
+export API_KEY=
 flask run
